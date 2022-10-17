@@ -5,7 +5,7 @@ class Futbolista(Persona, Deportista):
     listaFutbolistas = []
 
     def __init__(self, nombre, edad, altura, sexo, añosPracticando, golesMarcados, tarjetasRojas, piernaHabil):
-        Persona.__init__(nombre, edad, altura, sexo)
+        Persona.__init__(self, nombre, edad, altura, sexo)
         Deportista.__init__(self, añosPracticando)
         self._golesMarcado = golesMarcados
         self._tarjetasRojas = tarjetasRojas
@@ -39,4 +39,4 @@ class Futbolista(Persona, Deportista):
         clc.listaFutbolistas = listaFutbolistas
 
     def __str__(self):
-        return f"Mi nombre es {Persona.getNombre()} soy profesional en el deporte {Deportista.getDeporte()} Tengo {Persona.getEdad()} años de edad y llevo {Deportista.getAñosPracticando()} años en el deporte"
+        return f"Mi nombre es {self.getNombre()} soy profesional en el deporte {self.getDeporte()} Tengo {self.getEdad()} años de edad y llevo {self.getAñosPracticando()} años en el deporte"
